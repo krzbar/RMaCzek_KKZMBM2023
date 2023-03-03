@@ -1,5 +1,3 @@
-setwd("F:/STUDY/Paper")
-
 dataname = "wbc"
 data = read.csv(paste0(dataname, ".csv"), header = FALSE)
 original_lables = data$V11
