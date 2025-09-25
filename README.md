@@ -32,7 +32,7 @@ The scripts include procedures for running clustering experiments, evaluating cl
 ## Notes
 - In the **published paper**, only the **WBC dataset** was used.  
 - The WDBC and WPBC datasets are included here only for testing and verification purposes.  
-- Data files should be placed in the `Data/` directory (see [Data section](../Data/README.md) for details).
+- Data files should be placed in the `Data/` directory.
 
 ## Data
 
