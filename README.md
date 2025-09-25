@@ -62,5 +62,41 @@ In the **published paper**, only **WBC** was used; **WDBC** and **WPBC** are kep
 ## Experiment Results
 
 Experimental outputs are organized by dataset and by result type (plots vs. metrics).  
-Directory layout:
+
+
+### Contents
+
+- **IMG/**  
+  Figures produced from the experiments.  
+  - `Exact/`: results from Czekanowski’s Cluster – exact clustering  
+  - `Fuzzy/`: results from Czekanowski’s Cluster – fuzzy clustering  
+  - `Others/`: baseline/benchmark algorithms (see below)
+
+- **Metrics/**  
+  CSV summaries and intermediate outputs. Typical files include:  
+  - `*-acc.csv`: per-run accuracies across ordering methods  
+  - `*-max-acc.csv`: best accuracy per ordering method  
+  - `*-order-<METHOD>.csv`: sample order matrices (e.g., `HC_ward`)  
+  - `*-lable-<METHOD>.csv`: predicted labels per run  
+    > Note: filenames use `lable` to match the script output.
+
+Ordering methods considered in the experiments:  
+`SPIN_NH`, `OLO_ward`, `GW_ward`, `HC_ward`, `OLO_average`.
+
+### Baselines in `Others/`
+
+The `Others` category includes common clustering baselines used for comparison:  
+**CLARA**, **c-means**, **hierarchical**, **k-means**, and **PAM**.  
+Implementation details and parameters are documented in the scripts under `Code/`.
+
+---
+
+## How to re-run (quick start)
+
+1. Ensure data files are present under `Data/` with the filenames above.  
+2. In R, source the utilities and run the experiments, e.g.:
+   ```r
+   source("Code/metrics.R")
+   source("Code/experiments.R")   # set `dataname` to "wbc", "wdbc", or "wpbc" inside the script
+
 
