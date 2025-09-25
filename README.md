@@ -98,5 +98,8 @@ Implementation details and parameters are documented in the scripts under `Code/
    ```r
    source("Code/metrics.R")
    source("Code/experiments.R")   # set `dataname` to "wbc", "wdbc", or "wpbc" inside the script
+   ```
+3. Outputs (CSV and figures) will be written as in the “Experiment Results” structure described above.
 
+Scope clarification: This repository contains verification scripts, datasets, and experimental results supporting reproducibility. The paper’s analyses use WBC; WDBC/WPBC are retained for completeness and testing but are not part of the published results.
 
